@@ -111,11 +111,13 @@ namespace AirQuality
             else
                 MessageBox.Show("Russia Data not available");
 
-            //France Data 
+            //Finalnd Data 
             if (finlandData != null) //if we are able to get soome data
             {
                 int temp = int.Parse(finlandData["temperature"]);
                 int humidity = int.Parse(finlandData["humidity"]);
+
+                //int pmx = Utils.EstimatePMV(temp);
 
                 //update global data collection
                 updateGlobalData("finland", temp, humidity);

@@ -34,6 +34,17 @@ namespace AirQuality
         ///
         ///
 
+        public static int ComputePMV(int temp) 
+        {
+            return 0;
+        }
+
+        public static int ComputePPD(int temp)
+        {
+            return 0;
+        }
+
+
         public static int[] AverageSensorValues(int[] _tempValues, int[] _humidValues) //must be of the same length
         {
             if (_tempValues.Length != _humidValues.Length) 
@@ -65,9 +76,9 @@ namespace AirQuality
             //Based on the ASHRAE standard for acceptable temeprature and humidity during winter...accessuble here
             //http://quickplace.aipl.uhp-nancy.fr/servlet/QuickrSupportUtil?type=quickrdownload&key=/LotusQuickr/perccom/PageLibraryC1257D650041F650.nsf/0/ACD5AEABD67F29E3C1257D78002BFC35/$file/Thermal%2520Comfort%2520for%2520Office%2520Work%2520_%2520OSH%2520Answers.pdf
 
-            if (_humid > 20 && _humid < 70) //written in the standard as If Relative Humidity = 30%
+            if (_humid >= 20 && _humid <= 70) //written in the standard as If Relative Humidity = 30%
             {
-                if (_temp > 20 && _temp < 26)
+                if (_temp >= 20 && _temp <= 26)
                 {
                     goodAirQuality = true;
                 }
