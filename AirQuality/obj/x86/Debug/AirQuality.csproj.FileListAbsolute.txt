@@ -1,0 +1,13 @@
+c:\users\kola\documents\visual studio 2010\Projects\AirQuality\AirQuality\obj\x86\Debug\AirQuality.csprojResolveAssemblyReference.cache
+c:\users\kola\documents\visual studio 2010\Projects\AirQuality\AirQuality\obj\x86\Debug\AirQuality.Properties.Resources.resources
+c:\users\kola\documents\visual studio 2010\Projects\AirQuality\AirQuality\obj\x86\Debug\AirQuality.csproj.GenerateResource.Cache
+c:\users\kola\documents\visual studio 2010\Projects\AirQuality\AirQuality\bin\Debug\AirQuality.exe
+c:\users\kola\documents\visual studio 2010\Projects\AirQuality\AirQuality\bin\Debug\AirQuality.pdb
+c:\users\kola\documents\visual studio 2010\Projects\AirQuality\AirQuality\bin\Debug\SnmpSharpNet.dll
+c:\users\kola\documents\visual studio 2010\Projects\AirQuality\AirQuality\bin\Debug\SnmpSharpNet.pdb
+c:\users\kola\documents\visual studio 2010\Projects\AirQuality\AirQuality\bin\Debug\SnmpSharpNet.xml
+c:\users\kola\documents\visual studio 2010\Projects\AirQuality\AirQuality\obj\x86\Debug\AirQuality.Home.resources
+c:\users\kola\documents\visual studio 2010\Projects\AirQuality\AirQuality\obj\x86\Debug\AirQuality.exe
+c:\users\kola\documents\visual studio 2010\Projects\AirQuality\AirQuality\obj\x86\Debug\AirQuality.pdb
+C:\Users\kola\Documents\Visual Studio 2010\Projects\AirQuality\AirQuality\bin\Debug\AirQuality.exe.config
+C:\Users\kola\Documents\Visual Studio 2010\Projects\AirQuality\AirQuality\obj\x86\Debug\AirQuality.Graph.resources
