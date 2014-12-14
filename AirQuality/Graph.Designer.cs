@@ -40,11 +40,15 @@
             this.lblPMV = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblPPD = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.russianChart)).BeginInit();
             this.SuspendLayout();
             // 
             // russianChart
             // 
+            this.russianChart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             chartArea1.Name = "ChartArea";
             this.russianChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
@@ -66,7 +70,7 @@
             series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
             this.russianChart.Series.Add(series1);
             this.russianChart.Series.Add(series2);
-            this.russianChart.Size = new System.Drawing.Size(820, 468);
+            this.russianChart.Size = new System.Drawing.Size(468, 276);
             this.russianChart.TabIndex = 0;
             this.russianChart.Text = "Air Quality in Russia";
             // 
@@ -81,7 +85,7 @@
             this.lblText.AutoSize = true;
             this.lblText.Font = new System.Drawing.Font("Ubuntu", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblText.ForeColor = System.Drawing.Color.Black;
-            this.lblText.Location = new System.Drawing.Point(12, 44);
+            this.lblText.Location = new System.Drawing.Point(12, 9);
             this.lblText.Name = "lblText";
             this.lblText.Size = new System.Drawing.Size(177, 29);
             this.lblText.TabIndex = 1;
@@ -92,7 +96,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ubuntu", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(402, 48);
+            this.label1.Location = new System.Drawing.Point(16, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 20);
             this.label1.TabIndex = 2;
@@ -103,7 +107,7 @@
             this.lblPMV.AutoSize = true;
             this.lblPMV.Font = new System.Drawing.Font("Ubuntu", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPMV.ForeColor = System.Drawing.Color.Black;
-            this.lblPMV.Location = new System.Drawing.Point(511, 48);
+            this.lblPMV.Location = new System.Drawing.Point(113, 58);
             this.lblPMV.Name = "lblPMV";
             this.lblPMV.Size = new System.Drawing.Size(26, 26);
             this.lblPMV.TabIndex = 3;
@@ -114,7 +118,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Ubuntu", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(626, 48);
+            this.label3.Location = new System.Drawing.Point(240, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 20);
             this.label3.TabIndex = 4;
@@ -125,18 +129,30 @@
             this.lblPPD.AutoSize = true;
             this.lblPPD.Font = new System.Drawing.Font("Ubuntu", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPPD.ForeColor = System.Drawing.Color.Black;
-            this.lblPPD.Location = new System.Drawing.Point(741, 48);
+            this.lblPPD.Location = new System.Drawing.Point(329, 57);
             this.lblPPD.Name = "lblPPD";
             this.lblPPD.Size = new System.Drawing.Size(26, 26);
             this.lblPPD.TabIndex = 5;
             this.lblPPD.Text = "--";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Ubuntu", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(391, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 26);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "%";
             // 
             // Graph
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(842, 582);
+            this.ClientSize = new System.Drawing.Size(490, 390);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblPPD);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblPMV);
@@ -165,5 +181,6 @@
         private System.Windows.Forms.Label lblPMV;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblPPD;
+        private System.Windows.Forms.Label label2;
     }
 }

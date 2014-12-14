@@ -224,10 +224,14 @@ namespace AirQuality
             //now, compute the global average
             int[] globalAverages = Utils.AverageSensorValues(avgTemperatures, avgHumidities);
 
-            showGlobalAverages(globalAverages);
+            //compute global PMV and PPD
+            double pmvIndex = Utils.calculatePMV(globalAverages[0]);
+            double ppd = Utils.calculatePPD(pmvIndex);
+
+            showGlobalAverages(globalAverages, pmvIndex, ppd);
         }
 
-        void showGlobalAverages(int[] _averages) 
+        void showGlobalAverages(int[] _averages, double pmv, double ppd) 
         {
             lblAvgTemperature.Text = _averages[0].ToString();
             lblAvgHumidity.Text = _averages[1].ToString();
@@ -244,6 +248,19 @@ namespace AirQuality
                 lblGlobalAirQuality.BackColor = Color.Red;
                 lblGlobalAirQuality.Text = "Bad :( ";
             }
+
+            lblPMV.Text = pmv.ToString();
+            lblPPD.Text = ppd.ToString();
+
+            //do some ifs on the ppd to calculate the global comfort level
+            //most people will be satisfied (with the least PPD ~ 25%) pg 15 of the PMV/PPD doc here
+            //http://arche.univ-lorraine.fr/pluginfile.php/509391/mod_resource/content/1/EVS_EN_ISO_7730%3B2006_en.pdf
+            if (pmv >= -1 && pmv <= 1)                 
+            {
+                comfortPictureBox.Image = AirQuality.Properties.Resources.comfortable1;
+            }
+            else
+                comfortPictureBox.Image = AirQuality.Properties.Resources.uncomfortable;
         }
 
         private void lblRussiaAirQuality_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

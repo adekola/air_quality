@@ -38,11 +38,15 @@ namespace AirQuality
             updateData();
         }
 
-        void updateData() 
+        void updateData()
         {
             // Two items in the dictionary per request
             Dictionary<String, String> data = Utils.mockData(); //SnmpUtil.getData(_oids, _ipAddress);
-            russianChart.Series["temperature"].Points.AddY(Utils.parseData(data["temperature"]));
+            int temp = Utils.parseData(data["temperature"]);
+            double pmvIndex = Utils.calculatePMV(temp);
+            lblPMV.Text = pmvIndex.ToString();
+            lblPPD.Text = Utils.calculatePPD(pmvIndex).ToString();
+            russianChart.Series["temperature"].Points.AddY(temp);
             russianChart.Series["humidity"].Points.AddY(Utils.parseData(data["humidity"]));
         }
 
